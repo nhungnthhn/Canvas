@@ -25,13 +25,13 @@
             return "rgb("+ red + "," + blue + " ," + green +")";
         }
         function createCircle () {
-            let ctx = document.getElementById("myCanvas").getContext("2d");
+            let ctx = document.getElementById("myCanvas").getContext("2d"); //vẽ khung canvas 2d
             let radius = Math.floor(Math.random()*80);
             let color = getRandomColor();
             let x = Math.random() * window.innerWidth;
             let y = Math.random() * window.innerHeight;
             let circle = new circle(x, y, radius);
-            ctx.beginPath();
+            ctx.beginPath(); // vẽ hình tròn 
             ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
             ctx.fillStyle = color;
             ctx.fill();
